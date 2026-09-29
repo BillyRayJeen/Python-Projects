@@ -4,10 +4,7 @@ print("=========================================")
 print("			NETWORK TROUBLESHOOTER")
 print("=========================================")
 
-print = ("Please enter a website or IP adress")
-
-hostname = input("Enter a website or IP adress: ")
-
+hostname = input(" Please enter a website or IP adress: ")
 
 print("You entered:", hostname)
 
