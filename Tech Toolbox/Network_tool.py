@@ -4,14 +4,15 @@ print("=========================================")
 print("			NETWORK TROUBLESHOOTER")
 print("=========================================")
 
-hostname = input(" Please enter a website or IP adress: ")
+hostname = input(" Please enter a website or IP address: ")
 
 print("You entered:", hostname)
 
 try:
-	ip_adress = socket.gethostbyname(hostname)
-	print("IP adress:", ip_adress)
+	ip_address = socket.gethostbyname(hostname)
+	print("IP address:", ip_address)
 
 except socket.gaierror:
-	print("Could not find valid adress.")
+  print("DNS Lookup failed")
+  print("Could not find valid address.")
 	
