@@ -5,7 +5,7 @@ print("=========================================")
 print("      NETWORK TROUBLESHOOTER")
 print("=========================================")
 
-#Finding users Computer name and IPV4 Address
+#Find user's computer name and IPV4 Address
 
 computer_name = socket.gethostname()
 computer_ip = socket.gethostbyname(computer_name)
@@ -26,7 +26,7 @@ if connection.returncode == 0:
 else:
     print("Internet connection: Failed")
     
-#Input of website or IP address
+#Get website or IP address from user
 
 while True:
     print("[  IP Address/ Website Diagnosis  ]")
