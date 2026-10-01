@@ -1,0 +1,17 @@
+Network Troubleshooter
+
+A Python-based network troubleshooting tool designed to help users quickly check their internet connection and test network connectivity.
+
+The program automatically identifies the user’s device name and local IP address, then checks the current network connection. Users can also enter an IP address or web address to test connectivity and receive useful network information, including the resolved IP address and maximum ping response.
+
+The project was created as a practical way to develop my understanding of networking, IP addresses, DNS resolution and connectivity troubleshooting using Python.
+
+Features
+
+* Displays the user’s device name and local IP address
+* Checks network connectivity
+* Tests connectivity to IP addresses and web addresses
+* Resolves web addresses to their IP addresses
+* Measures ping response times
+* Reports the maximum ping response
+* Provides a simple command-line interface for troubleshooting
