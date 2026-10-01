@@ -2,7 +2,7 @@ import socket
 import subprocess
 
 print("=========================================")
-print("      NETWORK TROUBLESHOOTER")
+print("      NETWORK TROUBLESHOOTER             ")
 print("=========================================")
 
 #Find user's computer name and IPV4 Address
