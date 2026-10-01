@@ -14,14 +14,15 @@ print("Computer IP:", computer_ip)
 
 #Testing connection
 
-try:
-    ip_address = socket.gethostbyname("8.8.8.8")
-    print("Testing connection",ip_address)
-
-except socket.gaierror:
-    print("DNS Lookup failed")
-    print("Could not find valid address.")
-
+print("Testing connection")
+    
+connection = subprocess.run(["ping", "-n", "1" "8.8.8.8"], capture_output=True, text=True)
+    
+if connection.returncode == 0:
+    print("Internet connection: Successful")
+else:
+    print("Internet connection: Failed")
+    
 #Input of website or IP address
 
 hostname = input(" Please enter a website or IP address: ")
