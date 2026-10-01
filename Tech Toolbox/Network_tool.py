@@ -16,7 +16,7 @@ print("Computer IP:", computer_ip)
 
 print("Testing connection")
     
-connection = subprocess.run(["ping", "-n", "1" "8.8.8.8"], capture_output=True, text=True)
+connection = subprocess.run(["ping", "-n", "1", "8.8.8.8"], capture_output=True, text=True)
     
 if connection.returncode == 0:
     print("Internet connection: Successful")
