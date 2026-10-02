@@ -8,6 +8,7 @@ print("You entered:", Log)
 
 if "Password" in Log:
     print("Low_impact")
+    Impact = ("Low")
 elif "WI-FI" in Log:
     print("Medium_impact")
 elif "Crash" in Log:
@@ -15,5 +16,5 @@ elif "Crash" in Log:
 elif "Bluescreen" in Log:
     print("Emergency")
     
-if Log="Low_impact"
+if Impact == "Low":
 	print("Thank you, we will resolve this as soon as possible")
