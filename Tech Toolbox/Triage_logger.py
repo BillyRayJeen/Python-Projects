@@ -38,6 +38,5 @@ print("===============================")
 print("[         YOUR REPORT         ]")
 print("===============================")    
 
-print(Log)
-print(Error_description)
-
+print("[Issue]",Log)
+print("[Description]",Error_description)
