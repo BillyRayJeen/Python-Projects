@@ -7,4 +7,11 @@ Password = Password123
 
 print("Current username:", Username)
 print("Current password:", Password)
-input = ("Reset password Y/N?")
+input = ("Reset password Y/N? :")
+
+if input == Y
+	input("Password will reset to default, continue Y/N? :")
+if input == Y
+elif input == N 
+	print("Cancelling request")
+    break
