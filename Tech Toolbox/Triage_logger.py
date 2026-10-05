@@ -1,24 +1,31 @@
+import random as Gen
+
 print("===============================")
 print("         TRIAGE LOGGER         ")
 print("===============================")
-
-Log = input(" Please enter your related issue, try limit this to as short as possible :")
+User = input("Please enter your name: ")
+Log = input(" Please enter your related issue, try limit this to as short as possible :").lower()
 
 print("You entered:", Log)
 
 Error_description = input ("Please explain in further detail, what is the current issue with your device and when and what task you were doing when the issue occured :")
 print("You entered:", Error_description)
 
-if "Password" in Log:
+low_impact_keywords = ["password", "printer", "keyboard", "mouse"]
+medium_impact_keywords = ["wi-fi", "wifi", "internet", "slow", "email"]
+high_impact_keywords = ["crash", "not responding", "data loss"]
+emergency_keywords = ["bluescreen", "server down", "security breach"]
+
+if any(keyword in Log for keyword in low_impact_keywords):
     print("Low_impact")
     impact = ("low_impact")
-elif "WI-FI" in Log:
+elif any(keyword in Log for keyword in medium_impact_keywords):
     print("Medium_impact")
     impact = ("medium_impact")
-elif "Crash" in Log:
+elif any(keyword in Log for keyword in high_impact_keywords):
     print("High_impact")
     impact = ("high_impact")
-elif "Bluescreen" in Log:
+elif any(keyword in Log for keyword in emergency_impact_keywords):
     print("Emergency")
     impact = ("emergency")
     
@@ -33,10 +40,14 @@ elif impact == "high_impact":
 
 elif impact == "emergency":
     print("This is our top priority and we will resolve this as quickly as possible")
+    
+ticket_id = random.randint(1000,9999)
 
 print("===============================")        
 print("[         YOUR REPORT         ]")
-print("===============================")    
+print("===============================")
 
+print("[User]", User_name)
+print("[Ticket ID", ticket_id)   
 print("[Issue]",Log)
 print("[Description]",Error_description)
