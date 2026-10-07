@@ -19,6 +19,6 @@ if reset == "Y":
 	if confirmation == "Y":
 		print("Resetting Password")
 		Password = "".join(random.choice(characters) for _ in range(12))
-		print("New Password", Password)
+		print("New Password:", Password)
 	elif confirmation == "N": 
 		print("Cancelling request")
