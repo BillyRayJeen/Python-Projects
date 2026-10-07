@@ -1,17 +1,24 @@
+import random
+import string
+
+characters = string.ascii_letters + string.digits + "!@£$%^*"
+
 print("============================")
 print("  Username and Password sim    ")
 print("=============================")
 
-Username = "User5260"
-Password = "Password123"
+Username = "User" + str(random.randint(100, 999))
+Password = "ExamplePassword1"
 
 print("Current username:", Username)
-print("Current password:", Password)
-reset = ("Reset password Y/N? :")
+print("Current password: *********")
+reset = input("Reset password Y/N? :")
 
 if reset == "Y":
-	input("Password will reset to default, continue Y/N? :")
-if input == "Y":
-elif input == N 
-	print("Cancelling request")
-	break
+	confirmation = input("Password will reset to default, continue Y/N? :")
+	if confirmation == "Y":
+		print("Resetting Password")
+		Password = "".join(random.choice(characters) for _ in range(12))
+		print("New Password", Password)
+	elif confirmation == "N": 
+		print("Cancelling request")
