@@ -1,4 +1,4 @@
-Here’s the current version, renamed some values just to stay consistent , may i ask what psutil stands for? Here’s the code: pip install psutil
+pip install psutil
 import psutil
 import platform
 
