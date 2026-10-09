@@ -3,9 +3,9 @@ import psutil
 import platform
 
 print("================================")
-print(“”)
+print("")
 print("       PC HEALTH CHECKER        ")
-print(“”) 
+print("") 
 print("================================")
 
 print("==================================")
@@ -19,7 +19,7 @@ print("Processor:", platform.processor())
 
 def check_cpu():
 	try:	
-        cpu_usage = psutil.cpu_percent(interval=1)
+        	cpu_usage = psutil.cpu_percent(interval=1)
 		print("CPU Usage:", cpu_usage, "%")
         	if cpu_usage > 90:
                 print("WARNING: High CPU Usage")
@@ -33,12 +33,24 @@ def check_cpu():
 def check_ram():
 	try:
     	ram_usage = psutil.virtual_memory()
-		print(“RAM Usage:”, memory.percent, "%")
-    except:
-		print(“Unable to retrieve RAM information”) 
+		print("RAM Usage:", check_ram.percent, "%")
+        except:
+		print("Unable to retrieve RAM information") 
+
 def check_disk():
     try:
 		disk_usage = psutil.disk_usage("/")
-		print("Disk Usage:", disk.percent, "%")
+		print("Disk Usage:", check_disk.percent, "%")
     except:
 		print("Unable to retrieve disk information")
+
+def check_connection():
+        try:
+        	internet_usage = psutil.net_if_stats()
+        	print("Internet Connection:", check_connection)
+	except:
+                print("Unable to establish connection")           
+                
+check_cpu():
+check_ram():
+check_disk():
