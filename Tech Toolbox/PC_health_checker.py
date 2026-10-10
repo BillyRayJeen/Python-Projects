@@ -1,6 +1,7 @@
 pip install psutil
 import psutil
 import platform
+import socket
 
 print("================================")
 print("")
@@ -45,12 +46,14 @@ def check_disk():
 		print("Unable to retrieve disk information")
 
 def check_connection():
-        try:
-        	internet_usage = psutil.net_if_stats()
-        	print("Internet Connection:", check_connection)
-	except:
-                print("Unable to establish connection")           
+	try:
+        	socket.create_connection(("8.8.8.8",53), timeout=3)
+                print("Internet: Connected")
+        except OSError:
+        	print("Interent: Unavailable")
+
                 
 check_cpu():
 check_ram():
 check_disk():
+check_connection():
