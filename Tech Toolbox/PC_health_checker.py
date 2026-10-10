@@ -19,17 +19,19 @@ print("OS Version:", platform.version())
 print("Processor:", platform.processor())
 
 def check_cpu():
-	try:	
-        	cpu_usage = psutil.cpu_percent(interval=1)
-		print("CPU Usage:", cpu_usage, "%")
-        	if cpu_usage > 90:
-                print("WARNING: High CPU Usage")
-            elif cpu_usage > 70:
-                print("CPU usage elevated")
-            else:
-                print("CPU usage normal")
-	except:
-    	print("Unable to retrieve CPU information")
+    try:
+        cpu_usage = psutil.cpu_percent(interval=1)
+        print("CPU Usage:", cpu_usage, "%")
+
+        if cpu_usage > 90:
+            print("WARNING: High CPU Usage")
+        elif cpu_usage > 70:
+            print("CPU usage elevated")
+        else:
+            print("CPU usage normal")
+
+    except Exception:
+        print("Unable to retrieve CPU information")
 
 def check_ram():
 	try:
