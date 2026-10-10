@@ -1,4 +1,4 @@
-pip install psutil
+#remember in CMD to run: pip install psutil
 import psutil
 import platform
 import socket
