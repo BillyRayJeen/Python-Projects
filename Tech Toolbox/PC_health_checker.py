@@ -21,41 +21,44 @@ print("Processor:", platform.processor())
 def check_cpu():
     try:
         cpu_usage = psutil.cpu_percent(interval=1)
-        print("CPU Usage:", cpu_usage, "%")
+        return cpu_usage
 
         if cpu_usage > 90:
-            print("WARNING: High CPU Usage")
+            return"WARNING: High CPU Usage"
         elif cpu_usage > 70:
-            print("CPU usage elevated")
+            return"CPU usage elevated"
         else:
-            print("CPU usage normal")
+            return"CPU usage normal"
 
     except Exception:
-        print("Unable to retrieve CPU information")
+        return"Unable to retrieve CPU information"
 
 def check_ram():
 	try:
     	ram_usage = psutil.virtual_memory()
-		print("RAM Usage:", check_ram.percent, "%")
+		return ram_usage.percent
         except:
-		print("Unable to retrieve RAM information") 
+		return"Unable to retrieve RAM information"
 
 def check_disk():
     try:
 		disk_usage = psutil.disk_usage("/")
-		print("Disk Usage:", check_disk.percent, "%")
+		return disk_usage.percent
     except:
-		print("Unable to retrieve disk information")
+		return("Unable to retrieve disk information")
 
 def check_connection():
 	try:
         	socket.create_connection(("8.8.8.8",53), timeout=3)
-                print("Internet: Connected")
+                return"Internet: Connected"
         except OSError:
-        	print("Interent: Unavailable")
+			return"Internet: Unavailable"
 
                 
-check_cpu():
-check_ram():
-check_disk():
-check_connection():
+cpu_status = check_cpu():
+print(cpu_status)
+ram_status = check_ram():
+print(ram_status)
+disk_status = check_disk():
+print(disk_status)
+connection status = check_connection():
