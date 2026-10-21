@@ -9,16 +9,6 @@ print("This simulator will help you understand and tackle real life helpdesk iss
 print("")
 print("Are you ready to get started? (Y/N?)")
 
-input = (Please enter Y/N)
-
-	if input = Y
-    
-    elif input = yes
-    	
-    elif input = N
-    
-    elif input = no
-
 start_sim =
 print("===============================")
 print("      IT HELPDESK SYSTEM       ")
@@ -30,7 +20,6 @@ print("3. Update ticket")
 print("4. Search tickets")
 print("5. Exit")
 print("")
-
 
 choice = ("Please select an option")
 
@@ -45,3 +34,16 @@ choice = ("Please select an option")
     elif choice = 5
     print("Thank you for using the IT Helpdesk Simulator!")
     sys.exit(0)
+
+input = (Please enter Y/N)
+
+	if input = Y
+    	start_sim():
+	elif input = yes
+    	start_sim():
+	elif input = N
+    	print("Goodbye!")
+		sys.exit(0):
+	elif input = no
+		print("Goodbye!")
+    	sys.exit(0)
