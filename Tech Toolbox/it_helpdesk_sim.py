@@ -1,3 +1,5 @@
+import sys
+
 print("=============================")
 print("    IT HELPDESK SIMULATOR     ")
 print("=============================")
@@ -41,3 +43,5 @@ choice = ("Please select an option")
     elif choice = 4
     
     elif choice = 5
+    print("Thank you for using the IT Helpdesk Simulator!")
+    sys.exit(0)
