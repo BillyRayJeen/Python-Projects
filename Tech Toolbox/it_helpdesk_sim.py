@@ -1,5 +1,7 @@
 import sys
 
+
+
 print("=============================")
 print("    IT HELPDESK SIMULATOR     ")
 print("=============================")
@@ -17,26 +19,49 @@ answer = input("Please enter Y/N: ").lower()
     elif answer in ("n", "no"):
         print("Exiting application, goodbye!")
         sys.exit(0)
+running = True 
 
-print("===============================")
-print("      IT HELPDESK SYSTEM       ")
-print("===============================")
+while running:
+    
+def New_ticket(): 
+    print("Ticket creation")
 
-print("1. Create new ticket")
-print("2. View all tickets")
-print("3. Update ticket")
-print("4. Search tickets")
-print("5. Exit")
-print("")
+def View_tickets():
+	print("Viewing tickets")
+    
+def Update_ticket(): 
+    print("Select ticket to update")
 
-choice = input("Please select an option")
+def Search_tickets():
+    print("Search through tickets") 
+
+	print("================================")
+	print("      IT HELPDESK SYSTEM       ")
+	print("===============================")
+
+	print("1. Create new ticket")
+	print("2. View all tickets")
+	print("3. Update ticket")
+	print("4. Search tickets")
+	print("5. Exit")
+	print("")
+
+	choice = input("Please select an option")
 	if choice == "1":
 		print("You selected: Create new ticket")
-	elif choice == "2":
+        New_ticket()
+    elif choice == "2":
     	print("You selected: View all tickets")
-	elif choice == "3":
+        View_tickets()
+    elif choice == "3":
     	print("You selected: Update ticket")
-	elif choice == "4":
+        Update_tickets()
+    elif choice == "4":
     	print("You selected: Search tickets")
-	elif choice == "5":
-		print("You selected: Exit. Thank you for using the IT Helpdesk Simulator!")	sys.exit(0)
+        Search_tickets()
+    elif choice == "5":
+		print("You selected: Exit. Thank you for using the IT Helpdesk Simulator!")
+        running = False
+    else:
+    	print("Invalid choice. Please select 1-5")
+
