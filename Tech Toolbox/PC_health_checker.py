@@ -61,4 +61,5 @@ ram_status = check_ram():
 print(ram_status)
 disk_status = check_disk():
 print(disk_status)
-connection status = check_connection():
+connection_status = check_connection():
+print(connection_status)
